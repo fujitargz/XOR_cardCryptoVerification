@@ -1,0 +1,352 @@
+
+############################################################
+# Timestamp: 2024-11-29 13:15:32 JST
+# CBMC Version: 6.3.1 (cbmc-6.3.1)
+# Further Options: WEAK_SECURITY = 1, FORCE_RANDOM_CUTS = 1
+# N = 4, NUM_SYM = 2, L = 2, NUMBER_POSSIBLE_PERMUTATIONS = 24, NUMBER_POSSIBLE_SEQUENCES = 6, TIMEOUT = 5d
+############################################################
+
+############################################################
+
+CBMC version 6.3.1 (cbmc-6.3.1) 64-bit x86_64 linux
+Type-checking findTwoCardXORProtocol_rc
+Generating GOTO Program
+Adding CPROVER library (x86_64)
+Removal of function pointers and virtual functions
+Generic Property Instrumentation
+Starting Bounded Model Checking
+Passing problem to propositional reduction
+converting SSA
+Running propositional reduction
+SAT checker: instance is UNSATISFIABLE
+
+** Results:
+findTwoCardXORProtocol_rc.c function alignAndAssignFractions
+[alignAndAssignFractions.array_bounds.1] line 883 array 'probs'.frac upper bound in probs.frac[(signed long int)j]: SUCCESS
+[alignAndAssignFractions.array_bounds.2] line 883 array 'probs'.frac upper bound in probs.frac[(signed long int)k]: SUCCESS
+[alignAndAssignFractions.array_bounds.3] line 887 array 'probs'.frac upper bound in probs.frac[(signed long int)j]: SUCCESS
+[alignAndAssignFractions.array_bounds.4] line 893 array 'resultState'.seq upper bound in resultState.seq[(signed long int)j]: SUCCESS
+[alignAndAssignFractions.array_bounds.5] line 893 array 'resultState'.seq[].probs.frac upper bound in resultState.seq[(signed long int)j].probs.frac[(signed long int)k]: SUCCESS
+[alignAndAssignFractions.array_bounds.6] line 894 array 'probs'.frac upper bound in probs.frac[(signed long int)k]: SUCCESS
+
+findTwoCardXORProtocol_rc.c function applyShuffle
+[applyShuffle.array_bounds.1] line 843 array 'takenPermutations' upper bound in takenPermutations[(signed long int)permIndex]: SUCCESS
+[applyShuffle.array_bounds.2] line 849 array 'permutationSet' upper bound in permutationSet[(signed long int)i]: SUCCESS
+[applyShuffle.array_bounds.3] line 849 array 'permutationSet'[] upper bound in permutationSet[(signed long int)i][(signed long int)j]: SUCCESS
+[applyShuffle.array_bounds.4] line 849 array 'stateWithAllPermutations'.seq upper bound in stateWithAllPermutations.seq[(signed long int)permIndex]: SUCCESS
+[applyShuffle.array_bounds.5] line 849 array 'stateWithAllPermutations'.seq[].val upper bound in stateWithAllPermutations.seq[(signed long int)permIndex].val[(signed long int)j]: SUCCESS
+
+findTwoCardXORProtocol_rc.c function applyTurn
+[applyTurn.array_bounds.1] line 986 array 'result'.isUsed upper bound in result.isUsed[(signed long int)stateNumber]: SUCCESS
+[applyTurn.array_bounds.2] line 987 array 'result'.states upper bound in result.states[(signed long int)stateNumber]: SUCCESS
+[applyTurn.array_bounds.3] line 994 array 'resultState'.seq upper bound in resultState.seq[(signed long int)seqIndex]: SUCCESS
+[applyTurn.array_bounds.4] line 994 array 'resultState'.seq[].probs.frac upper bound in resultState.seq[(signed long int)seqIndex].probs.frac[(signed long int)i]: SUCCESS
+[applyTurn.array_bounds.5] line 1000 array 'result'.isUsed upper bound in result.isUsed[(signed long int)i]: SUCCESS
+[applyTurn.array_bounds.6] line 1001 array 'result'.states upper bound in result.states[(signed long int)i]: SUCCESS
+[applyTurn.array_bounds.7] line 1002 array 'result'.states upper bound in result.states[(signed long int)i]: SUCCESS
+[applyTurn.array_bounds.8] line 1002 array 'result'.states upper bound in result.states[(signed long int)i]: SUCCESS
+
+findTwoCardXORProtocol_rc.c function checkTransitivityOfPermutation
+[checkTransitivityOfPermutation.array_bounds.1] line 662 array 'staysFix' upper bound in staysFix[(signed long int)j]: SUCCESS
+[checkTransitivityOfPermutation.array_bounds.2] line 662 array dynamic object upper bound in permutationSet[(signed long int)i][(signed long int)j]: SUCCESS
+[checkTransitivityOfPermutation.pointer_dereference.1] line 662 dereference failure: pointer NULL in permutationSet[(signed long int)i]: SUCCESS
+[checkTransitivityOfPermutation.pointer_dereference.2] line 662 dereference failure: pointer invalid in permutationSet[(signed long int)i]: SUCCESS
+[checkTransitivityOfPermutation.pointer_dereference.3] line 662 dereference failure: deallocated dynamic object in permutationSet[(signed long int)i]: SUCCESS
+[checkTransitivityOfPermutation.pointer_dereference.4] line 662 dereference failure: dead object in permutationSet[(signed long int)i]: SUCCESS
+[checkTransitivityOfPermutation.pointer_dereference.5] line 662 dereference failure: pointer outside object bounds in permutationSet[(signed long int)i]: SUCCESS
+[checkTransitivityOfPermutation.pointer_dereference.6] line 662 dereference failure: invalid integer address in permutationSet[(signed long int)i]: SUCCESS
+[checkTransitivityOfPermutation.array_bounds.3] line 671 array 'singleLoop' upper bound in singleLoop[(signed long int)currentIdx]: SUCCESS
+[checkTransitivityOfPermutation.array_bounds.4] line 672 array dynamic object upper bound in permutationSet[(signed long int)i][(signed long int)currentIdx]: SUCCESS
+[checkTransitivityOfPermutation.pointer_dereference.7] line 672 dereference failure: pointer NULL in permutationSet[(signed long int)i]: SUCCESS
+[checkTransitivityOfPermutation.pointer_dereference.8] line 672 dereference failure: pointer invalid in permutationSet[(signed long int)i]: SUCCESS
+[checkTransitivityOfPermutation.pointer_dereference.9] line 672 dereference failure: deallocated dynamic object in permutationSet[(signed long int)i]: SUCCESS
+[checkTransitivityOfPermutation.pointer_dereference.10] line 672 dereference failure: dead object in permutationSet[(signed long int)i]: SUCCESS
+[checkTransitivityOfPermutation.pointer_dereference.11] line 672 dereference failure: pointer outside object bounds in permutationSet[(signed long int)i]: SUCCESS
+[checkTransitivityOfPermutation.pointer_dereference.12] line 672 dereference failure: invalid integer address in permutationSet[(signed long int)i]: SUCCESS
+[checkTransitivityOfPermutation.array_bounds.5] line 678 array 'singleLoop' upper bound in singleLoop[(signed long int)j]: SUCCESS
+[checkTransitivityOfPermutation.array_bounds.6] line 678 array 'staysFix' upper bound in staysFix[(signed long int)j]: SUCCESS
+[checkTransitivityOfPermutation.array_bounds.7] line 680 array 'isSingleLoopPerm' upper bound in isSingleLoopPerm[(signed long int)i]: SUCCESS
+[checkTransitivityOfPermutation.array_bounds.8] line 689 array 'isSingleLoopPerm' upper bound in isSingleLoopPerm[(signed long int)singleLoopPermIdx]: SUCCESS
+[checkTransitivityOfPermutation.array_bounds.9] line 696 array 'idPerm'.arr upper bound in idPerm.arr[(signed long int)i]: SUCCESS
+[checkTransitivityOfPermutation.array_bounds.10] line 697 array 'singleLoopPermNArray'.arr upper bound in singleLoopPermNArray.arr[(signed long int)i]: SUCCESS
+[checkTransitivityOfPermutation.array_bounds.11] line 697 array dynamic object upper bound in permutationSet[(signed long int)singleLoopPermIdx][(signed long int)i]: SUCCESS
+[checkTransitivityOfPermutation.pointer_dereference.13] line 697 dereference failure: pointer NULL in permutationSet[(signed long int)singleLoopPermIdx]: SUCCESS
+[checkTransitivityOfPermutation.pointer_dereference.14] line 697 dereference failure: pointer invalid in permutationSet[(signed long int)singleLoopPermIdx]: SUCCESS
+[checkTransitivityOfPermutation.pointer_dereference.15] line 697 dereference failure: deallocated dynamic object in permutationSet[(signed long int)singleLoopPermIdx]: SUCCESS
+[checkTransitivityOfPermutation.pointer_dereference.16] line 697 dereference failure: dead object in permutationSet[(signed long int)singleLoopPermIdx]: SUCCESS
+[checkTransitivityOfPermutation.pointer_dereference.17] line 697 dereference failure: pointer outside object bounds in permutationSet[(signed long int)singleLoopPermIdx]: SUCCESS
+[checkTransitivityOfPermutation.pointer_dereference.18] line 697 dereference failure: invalid integer address in permutationSet[(signed long int)singleLoopPermIdx]: SUCCESS
+[checkTransitivityOfPermutation.array_bounds.12] line 701 array 'generatedPermSet' upper bound in generatedPermSet[(signed long int)(i - (unsigned int)1)]: SUCCESS
+[checkTransitivityOfPermutation.array_bounds.13] line 702 array 'generatedPermSet' upper bound in generatedPermSet[(signed long int)i]: SUCCESS
+[checkTransitivityOfPermutation.array_bounds.14] line 711 array dynamic object upper bound in permutationSet[(signed long int)i][(signed long int)j]: SUCCESS
+[checkTransitivityOfPermutation.array_bounds.15] line 711 array 'generatedPermSet' upper bound in generatedPermSet[(signed long int)generatedPermIdx]: SUCCESS
+[checkTransitivityOfPermutation.array_bounds.16] line 711 array 'generatedPermSet'[].arr upper bound in generatedPermSet[(signed long int)generatedPermIdx].arr[(signed long int)j]: SUCCESS
+[checkTransitivityOfPermutation.pointer_dereference.19] line 711 dereference failure: pointer NULL in permutationSet[(signed long int)i]: SUCCESS
+[checkTransitivityOfPermutation.pointer_dereference.20] line 711 dereference failure: pointer invalid in permutationSet[(signed long int)i]: SUCCESS
+[checkTransitivityOfPermutation.pointer_dereference.21] line 711 dereference failure: deallocated dynamic object in permutationSet[(signed long int)i]: SUCCESS
+[checkTransitivityOfPermutation.pointer_dereference.22] line 711 dereference failure: dead object in permutationSet[(signed long int)i]: SUCCESS
+[checkTransitivityOfPermutation.pointer_dereference.23] line 711 dereference failure: pointer outside object bounds in permutationSet[(signed long int)i]: SUCCESS
+[checkTransitivityOfPermutation.pointer_dereference.24] line 711 dereference failure: invalid integer address in permutationSet[(signed long int)i]: SUCCESS
+[checkTransitivityOfPermutation.array_bounds.17] line 720 array 'subgroupSizes' upper bound in subgroupSizes[(signed long int)i]: SUCCESS
+[checkTransitivityOfPermutation.array_bounds.18] line 742 array 'firstPermutation'.arr upper bound in firstPermutation.arr[(signed long int)k]: SUCCESS
+[checkTransitivityOfPermutation.array_bounds.19] line 742 array dynamic object upper bound in permutationSet[(signed long int)i][(signed long int)k]: SUCCESS
+[checkTransitivityOfPermutation.pointer_dereference.25] line 742 dereference failure: pointer NULL in permutationSet[(signed long int)i]: SUCCESS
+[checkTransitivityOfPermutation.pointer_dereference.26] line 742 dereference failure: pointer invalid in permutationSet[(signed long int)i]: SUCCESS
+[checkTransitivityOfPermutation.pointer_dereference.27] line 742 dereference failure: deallocated dynamic object in permutationSet[(signed long int)i]: SUCCESS
+[checkTransitivityOfPermutation.pointer_dereference.28] line 742 dereference failure: dead object in permutationSet[(signed long int)i]: SUCCESS
+[checkTransitivityOfPermutation.pointer_dereference.29] line 742 dereference failure: pointer outside object bounds in permutationSet[(signed long int)i]: SUCCESS
+[checkTransitivityOfPermutation.pointer_dereference.30] line 742 dereference failure: invalid integer address in permutationSet[(signed long int)i]: SUCCESS
+[checkTransitivityOfPermutation.array_bounds.20] line 743 array 'secondPermutation'.arr upper bound in secondPermutation.arr[(signed long int)k]: SUCCESS
+[checkTransitivityOfPermutation.array_bounds.21] line 743 array dynamic object upper bound in permutationSet[(signed long int)j][(signed long int)k]: SUCCESS
+[checkTransitivityOfPermutation.pointer_dereference.31] line 743 dereference failure: pointer NULL in permutationSet[(signed long int)j]: SUCCESS
+[checkTransitivityOfPermutation.pointer_dereference.32] line 743 dereference failure: pointer invalid in permutationSet[(signed long int)j]: SUCCESS
+[checkTransitivityOfPermutation.pointer_dereference.33] line 743 dereference failure: deallocated dynamic object in permutationSet[(signed long int)j]: SUCCESS
+[checkTransitivityOfPermutation.pointer_dereference.34] line 743 dereference failure: dead object in permutationSet[(signed long int)j]: SUCCESS
+[checkTransitivityOfPermutation.pointer_dereference.35] line 743 dereference failure: pointer outside object bounds in permutationSet[(signed long int)j]: SUCCESS
+[checkTransitivityOfPermutation.pointer_dereference.36] line 743 dereference failure: invalid integer address in permutationSet[(signed long int)j]: SUCCESS
+[checkTransitivityOfPermutation.array_bounds.22] line 749 array 'permResultFromBothPerms'.arr upper bound in permResultFromBothPerms.arr[(signed long int)k]: SUCCESS
+[checkTransitivityOfPermutation.array_bounds.23] line 749 array dynamic object upper bound in permutationSet[(signed long int)resultIdx][(signed long int)k]: SUCCESS
+[checkTransitivityOfPermutation.pointer_dereference.37] line 749 dereference failure: pointer NULL in permutationSet[(signed long int)resultIdx]: SUCCESS
+[checkTransitivityOfPermutation.pointer_dereference.38] line 749 dereference failure: pointer invalid in permutationSet[(signed long int)resultIdx]: SUCCESS
+[checkTransitivityOfPermutation.pointer_dereference.39] line 749 dereference failure: deallocated dynamic object in permutationSet[(signed long int)resultIdx]: SUCCESS
+[checkTransitivityOfPermutation.pointer_dereference.40] line 749 dereference failure: dead object in permutationSet[(signed long int)resultIdx]: SUCCESS
+[checkTransitivityOfPermutation.pointer_dereference.41] line 749 dereference failure: pointer outside object bounds in permutationSet[(signed long int)resultIdx]: SUCCESS
+[checkTransitivityOfPermutation.pointer_dereference.42] line 749 dereference failure: invalid integer address in permutationSet[(signed long int)resultIdx]: SUCCESS
+
+findTwoCardXORProtocol_rc.c function combinePermutations
+[combinePermutations.array_bounds.1] line 523 array 'result'.arr upper bound in result.arr[(signed long int)i]: SUCCESS
+[combinePermutations.array_bounds.2] line 523 array 'firstPermutation'.arr upper bound in firstPermutation.arr[(signed long int)i]: SUCCESS
+[combinePermutations.array_bounds.3] line 523 array 'secondPermutation'.arr upper bound in secondPermutation.arr[(signed long int)firstPermutation.arr[(signed long int)i]]: SUCCESS
+
+findTwoCardXORProtocol_rc.c function computeTurnProbabilities
+[computeTurnProbabilities.array_bounds.1] line 903 array 'probs'.frac upper bound in probs.frac[(signed long int)i]: SUCCESS
+[computeTurnProbabilities.array_bounds.2] line 909 array 'resultState'.seq upper bound in resultState.seq[(signed long int)j]: SUCCESS
+[computeTurnProbabilities.array_bounds.3] line 912 array 'resultSeq'.probs.frac upper bound in resultSeq.probs.frac[(signed long int)k]: SUCCESS
+[computeTurnProbabilities.array_bounds.4] line 915 array 'probs'.frac upper bound in probs.frac[(signed long int)k]: SUCCESS
+[computeTurnProbabilities.array_bounds.5] line 924 array 'probs'.frac upper bound in probs.frac[(signed long int)k]: SUCCESS
+
+findTwoCardXORProtocol_rc.c function copyObservations
+[copyObservations.array_bounds.1] line 941 array 'result'.states upper bound in result.states[(signed long int)i]: SUCCESS
+[copyObservations.array_bounds.2] line 942 array 'result'.isUsed upper bound in result.isUsed[(signed long int)i]: SUCCESS
+[copyObservations.array_bounds.3] line 950 array 's'.seq upper bound in s.seq[(signed long int)i]: SUCCESS
+[copyObservations.array_bounds.4] line 952 array 'seq'.val upper bound in seq.val[(signed long int)turnPosition]: SUCCESS
+[copyObservations.array_bounds.5] line 954 array 'result'.isUsed upper bound in result.isUsed[(signed long int)turnIdx]: SUCCESS
+[copyObservations.array_bounds.6] line 958 array 'seq'.probs.frac upper bound in seq.probs.frac[(signed long int)j]: SUCCESS
+[copyObservations.array_bounds.7] line 960 array 'result'.states upper bound in result.states[(signed long int)turnIdx]: SUCCESS
+[copyObservations.array_bounds.8] line 960 array 'result'.states[].seq upper bound in result.states[(signed long int)turnIdx].seq[(signed long int)i]: SUCCESS
+[copyObservations.array_bounds.9] line 960 array 'result'.states[].seq[].probs.frac upper bound in result.states[(signed long int)turnIdx].seq[(signed long int)i].probs.frac[(signed long int)j]: SUCCESS
+
+findTwoCardXORProtocol_rc.c function doShuffle
+[doShuffle.array_bounds.1] line 798 array 's'.seq upper bound in s.seq[(signed long int)i]: SUCCESS
+[doShuffle.array_bounds.2] line 805 array dynamic object upper bound in permutationSet[(signed long int)j][(signed long int)k]: SUCCESS
+[doShuffle.array_bounds.3] line 805 array 'resultingSeq'.arr upper bound in resultingSeq.arr[(signed long int)permutationSet[(signed long int)j][(signed long int)k]]: SUCCESS
+[doShuffle.array_bounds.4] line 805 array 's'.seq upper bound in s.seq[(signed long int)i]: SUCCESS
+[doShuffle.array_bounds.5] line 805 array 's'.seq[].val upper bound in s.seq[(signed long int)i].val[(signed long int)k]: SUCCESS
+[doShuffle.pointer_dereference.1] line 805 dereference failure: pointer NULL in permutationSet[(signed long int)j]: SUCCESS
+[doShuffle.pointer_dereference.2] line 805 dereference failure: pointer invalid in permutationSet[(signed long int)j]: SUCCESS
+[doShuffle.pointer_dereference.3] line 805 dereference failure: deallocated dynamic object in permutationSet[(signed long int)j]: SUCCESS
+[doShuffle.pointer_dereference.4] line 805 dereference failure: dead object in permutationSet[(signed long int)j]: SUCCESS
+[doShuffle.pointer_dereference.5] line 805 dereference failure: pointer outside object bounds in permutationSet[(signed long int)j]: SUCCESS
+[doShuffle.pointer_dereference.6] line 805 dereference failure: invalid integer address in permutationSet[(signed long int)j]: SUCCESS
+[doShuffle.array_bounds.8] line 810 array 'res'.seq upper bound in res.seq[(signed long int)resultSeqIndex]: SUCCESS
+[doShuffle.array_bounds.6] line 811 array 's'.seq upper bound in s.seq[(signed long int)i]: SUCCESS
+[doShuffle.array_bounds.7] line 812 array 'res'.seq upper bound in res.seq[(signed long int)resultSeqIndex]: SUCCESS
+
+findTwoCardXORProtocol_rc.c function getEmptyState
+[getEmptyState.array_bounds.1] line 361 array 'symbolCount'.arr upper bound in symbolCount.arr[(signed long int)i]: SUCCESS
+[getEmptyState.array_bounds.2] line 367 array 'taken'.arr upper bound in taken.arr[(signed long int)j]: SUCCESS
+[getEmptyState.array_bounds.3] line 370 array 's'.seq upper bound in s.seq[(signed long int)i]: SUCCESS
+[getEmptyState.array_bounds.4] line 370 array 's'.seq[].val upper bound in s.seq[(signed long int)i].val[(signed long int)j]: SUCCESS
+[getEmptyState.array_bounds.5] line 374 array 'taken'.arr upper bound in taken.arr[(signed long int)idx]: SUCCESS
+[getEmptyState.array_bounds.6] line 379 array 'symbolCount'.arr upper bound in symbolCount.arr[(signed long int)j]: SUCCESS
+[getEmptyState.array_bounds.7] line 379 array 'taken'.arr upper bound in taken.arr[(signed long int)j]: SUCCESS
+[getEmptyState.array_bounds.8] line 381 array 'taken'.arr upper bound in taken.arr[(signed long int)j]: SUCCESS
+[getEmptyState.array_bounds.9] line 381 array 'symbolCount'.arr upper bound in symbolCount.arr[(signed long int)j]: SUCCESS
+[getEmptyState.array_bounds.10] line 387 array 's'.seq upper bound in s.seq[(signed long int)i]: SUCCESS
+[getEmptyState.array_bounds.11] line 387 array 's'.seq[].probs.frac upper bound in s.seq[(signed long int)i].probs.frac[(signed long int)j]: SUCCESS
+[getEmptyState.array_bounds.12] line 397 array 's'.seq upper bound in s.seq[(signed long int)last]: SUCCESS
+[getEmptyState.array_bounds.13] line 397 array 's'.seq[].val upper bound in s.seq[(signed long int)last].val[(signed long int)j]: SUCCESS
+[getEmptyState.array_bounds.14] line 398 array 's'.seq upper bound in s.seq[(signed long int)i]: SUCCESS
+[getEmptyState.array_bounds.15] line 398 array 's'.seq[].val upper bound in s.seq[(signed long int)i].val[(signed long int)j]: SUCCESS
+
+findTwoCardXORProtocol_rc.c function getSequenceIndexFromArray
+[getSequenceIndexFromArray.array_bounds.1] line 467 array 'compareState'.seq upper bound in compareState.seq[(signed long int)seqIdx]: SUCCESS
+[getSequenceIndexFromArray.array_bounds.2] line 470 array 'compare'.arr upper bound in compare.arr[(signed long int)i]: SUCCESS
+[getSequenceIndexFromArray.array_bounds.3] line 470 array 'seq'.val upper bound in seq.val[(signed long int)i]: SUCCESS
+
+findTwoCardXORProtocol_rc.c function getStartSequence
+[getStartSequence.array_bounds.1] line 426 array 'taken'.arr upper bound in taken.arr[(signed long int)i]: SUCCESS
+[getStartSequence.array_bounds.2] line 430 array 'res'.arr upper bound in res.arr[(signed long int)i]: SUCCESS
+[getStartSequence.array_bounds.3] line 434 array 'taken'.arr upper bound in taken.arr[(signed long int)idx]: SUCCESS
+[getStartSequence.array_bounds.4] line 441 array 'res'.arr upper bound in res.arr[(signed long int)i]: SUCCESS
+
+findTwoCardXORProtocol_rc.c function getStateWithAllPermutations
+[getStateWithAllPermutations.array_bounds.1] line 480 array 'taken'.arr upper bound in taken.arr[(signed long int)j]: SUCCESS
+[getStateWithAllPermutations.array_bounds.2] line 483 array 's'.seq upper bound in s.seq[(signed long int)i]: SUCCESS
+[getStateWithAllPermutations.array_bounds.3] line 483 array 's'.seq[].val upper bound in s.seq[(signed long int)i].val[(signed long int)j]: SUCCESS
+[getStateWithAllPermutations.array_bounds.4] line 487 array 'taken'.arr upper bound in taken.arr[(signed long int)idx]: SUCCESS
+[getStateWithAllPermutations.array_bounds.5] line 495 array 's'.seq upper bound in s.seq[(signed long int)i]: SUCCESS
+[getStateWithAllPermutations.array_bounds.6] line 495 array 's'.seq[].probs.frac upper bound in s.seq[(signed long int)i].probs.frac[(signed long int)j]: SUCCESS
+[getStateWithAllPermutations.array_bounds.7] line 505 array 's'.seq upper bound in s.seq[(signed long int)last]: SUCCESS
+[getStateWithAllPermutations.array_bounds.8] line 505 array 's'.seq[].val upper bound in s.seq[(signed long int)last].val[(signed long int)j]: SUCCESS
+[getStateWithAllPermutations.array_bounds.9] line 506 array 's'.seq upper bound in s.seq[(signed long int)i]: SUCCESS
+[getStateWithAllPermutations.array_bounds.10] line 506 array 's'.seq[].val upper bound in s.seq[(signed long int)i].val[(signed long int)j]: SUCCESS
+
+findTwoCardXORProtocol_rc.c function isBottomFree
+[isBottomFree.array_bounds.1] line 549 array 's'.seq upper bound in s.seq[(signed long int)i]: SUCCESS
+
+findTwoCardXORProtocol_rc.c function isFinalState
+[isFinalState.array_bounds.1] line 608 array 's'.seq upper bound in s.seq[(signed long int)i]: SUCCESS
+[isFinalState.array_bounds.2] line 611 array 's'.seq upper bound in s.seq[(signed long int)i]: SUCCESS
+[isFinalState.array_bounds.3] line 611 array 's'.seq[].probs.frac lower bound in s.seq[(signed long int)i].probs.frac[(signed long int)1]: SUCCESS
+[isFinalState.array_bounds.4] line 611 array 's'.seq upper bound in s.seq[(signed long int)i]: SUCCESS
+[isFinalState.array_bounds.5] line 611 array 's'.seq[].probs.frac lower bound in s.seq[(signed long int)i].probs.frac[(signed long int)1]: SUCCESS
+[isFinalState.array_bounds.6] line 611 array 's'.seq upper bound in s.seq[(signed long int)i]: SUCCESS
+[isFinalState.array_bounds.7] line 611 array 's'.seq[].probs.frac lower bound in s.seq[(signed long int)i].probs.frac[(signed long int)2]: SUCCESS
+[isFinalState.array_bounds.8] line 612 array 's'.seq upper bound in s.seq[(signed long int)i]: SUCCESS
+[isFinalState.array_bounds.9] line 612 array 's'.seq[].val upper bound in s.seq[(signed long int)i].val[(signed long int)a]: SUCCESS
+[isFinalState.array_bounds.10] line 613 array 's'.seq[].val upper bound in s.seq[(signed long int)i].val[(signed long int)b]: SUCCESS
+
+findTwoCardXORProtocol_rc.c function isOneOne
+[isOneOne.pointer_dereference.1] line 1107 dereference failure: pointer NULL in arr[(signed long int)0]: SUCCESS
+[isOneOne.pointer_dereference.2] line 1107 dereference failure: pointer invalid in arr[(signed long int)0]: SUCCESS
+[isOneOne.pointer_dereference.3] line 1107 dereference failure: deallocated dynamic object in arr[(signed long int)0]: SUCCESS
+[isOneOne.pointer_dereference.4] line 1107 dereference failure: dead object in arr[(signed long int)0]: SUCCESS
+[isOneOne.pointer_dereference.5] line 1107 dereference failure: pointer outside object bounds in arr[(signed long int)0]: SUCCESS
+[isOneOne.pointer_dereference.6] line 1107 dereference failure: invalid integer address in arr[(signed long int)0]: SUCCESS
+[isOneOne.pointer_dereference.7] line 1107 dereference failure: pointer NULL in arr[(signed long int)1]: SUCCESS
+[isOneOne.pointer_dereference.8] line 1107 dereference failure: pointer invalid in arr[(signed long int)1]: SUCCESS
+[isOneOne.pointer_dereference.9] line 1107 dereference failure: deallocated dynamic object in arr[(signed long int)1]: SUCCESS
+[isOneOne.pointer_dereference.10] line 1107 dereference failure: dead object in arr[(signed long int)1]: SUCCESS
+[isOneOne.pointer_dereference.11] line 1107 dereference failure: pointer outside object bounds in arr[(signed long int)1]: SUCCESS
+[isOneOne.pointer_dereference.12] line 1107 dereference failure: invalid integer address in arr[(signed long int)1]: SUCCESS
+[isOneOne.pointer_dereference.13] line 1107 dereference failure: pointer NULL in arr[(signed long int)2]: SUCCESS
+[isOneOne.pointer_dereference.14] line 1107 dereference failure: pointer invalid in arr[(signed long int)2]: SUCCESS
+[isOneOne.pointer_dereference.15] line 1107 dereference failure: deallocated dynamic object in arr[(signed long int)2]: SUCCESS
+[isOneOne.pointer_dereference.16] line 1107 dereference failure: dead object in arr[(signed long int)2]: SUCCESS
+[isOneOne.pointer_dereference.17] line 1107 dereference failure: pointer outside object bounds in arr[(signed long int)2]: SUCCESS
+[isOneOne.pointer_dereference.18] line 1107 dereference failure: invalid integer address in arr[(signed long int)2]: SUCCESS
+[isOneOne.pointer_dereference.19] line 1107 dereference failure: pointer NULL in arr[(signed long int)3]: SUCCESS
+[isOneOne.pointer_dereference.20] line 1107 dereference failure: pointer invalid in arr[(signed long int)3]: SUCCESS
+[isOneOne.pointer_dereference.21] line 1107 dereference failure: deallocated dynamic object in arr[(signed long int)3]: SUCCESS
+[isOneOne.pointer_dereference.22] line 1107 dereference failure: dead object in arr[(signed long int)3]: SUCCESS
+[isOneOne.pointer_dereference.23] line 1107 dereference failure: pointer outside object bounds in arr[(signed long int)3]: SUCCESS
+[isOneOne.pointer_dereference.24] line 1107 dereference failure: invalid integer address in arr[(signed long int)3]: SUCCESS
+
+findTwoCardXORProtocol_rc.c function isOneZero
+[isOneZero.pointer_dereference.1] line 1100 dereference failure: pointer NULL in arr[(signed long int)0]: SUCCESS
+[isOneZero.pointer_dereference.2] line 1100 dereference failure: pointer invalid in arr[(signed long int)0]: SUCCESS
+[isOneZero.pointer_dereference.3] line 1100 dereference failure: deallocated dynamic object in arr[(signed long int)0]: SUCCESS
+[isOneZero.pointer_dereference.4] line 1100 dereference failure: dead object in arr[(signed long int)0]: SUCCESS
+[isOneZero.pointer_dereference.5] line 1100 dereference failure: pointer outside object bounds in arr[(signed long int)0]: SUCCESS
+[isOneZero.pointer_dereference.6] line 1100 dereference failure: invalid integer address in arr[(signed long int)0]: SUCCESS
+[isOneZero.pointer_dereference.7] line 1100 dereference failure: pointer NULL in arr[(signed long int)1]: SUCCESS
+[isOneZero.pointer_dereference.8] line 1100 dereference failure: pointer invalid in arr[(signed long int)1]: SUCCESS
+[isOneZero.pointer_dereference.9] line 1100 dereference failure: deallocated dynamic object in arr[(signed long int)1]: SUCCESS
+[isOneZero.pointer_dereference.10] line 1100 dereference failure: dead object in arr[(signed long int)1]: SUCCESS
+[isOneZero.pointer_dereference.11] line 1100 dereference failure: pointer outside object bounds in arr[(signed long int)1]: SUCCESS
+[isOneZero.pointer_dereference.12] line 1100 dereference failure: invalid integer address in arr[(signed long int)1]: SUCCESS
+[isOneZero.pointer_dereference.13] line 1100 dereference failure: pointer NULL in arr[(signed long int)2]: SUCCESS
+[isOneZero.pointer_dereference.14] line 1100 dereference failure: pointer invalid in arr[(signed long int)2]: SUCCESS
+[isOneZero.pointer_dereference.15] line 1100 dereference failure: deallocated dynamic object in arr[(signed long int)2]: SUCCESS
+[isOneZero.pointer_dereference.16] line 1100 dereference failure: dead object in arr[(signed long int)2]: SUCCESS
+[isOneZero.pointer_dereference.17] line 1100 dereference failure: pointer outside object bounds in arr[(signed long int)2]: SUCCESS
+[isOneZero.pointer_dereference.18] line 1100 dereference failure: invalid integer address in arr[(signed long int)2]: SUCCESS
+[isOneZero.pointer_dereference.19] line 1100 dereference failure: pointer NULL in arr[(signed long int)3]: SUCCESS
+[isOneZero.pointer_dereference.20] line 1100 dereference failure: pointer invalid in arr[(signed long int)3]: SUCCESS
+[isOneZero.pointer_dereference.21] line 1100 dereference failure: deallocated dynamic object in arr[(signed long int)3]: SUCCESS
+[isOneZero.pointer_dereference.22] line 1100 dereference failure: dead object in arr[(signed long int)3]: SUCCESS
+[isOneZero.pointer_dereference.23] line 1100 dereference failure: pointer outside object bounds in arr[(signed long int)3]: SUCCESS
+[isOneZero.pointer_dereference.24] line 1100 dereference failure: invalid integer address in arr[(signed long int)3]: SUCCESS
+
+findTwoCardXORProtocol_rc.c function isStillPossible
+[isStillPossible.array_bounds.1] line 456 array 'probs'.frac upper bound in probs.frac[(signed long int)i]: SUCCESS
+
+findTwoCardXORProtocol_rc.c function isValid
+[isValid.array_bounds.1] line 574 array 's'.seq upper bound in s.seq[(signed long int)seqIndexForThisProbability]: SUCCESS
+[isValid.array_bounds.2] line 580 array 'seq'.probs.frac upper bound in seq.probs.frac[(signed long int)k]: SUCCESS
+
+findTwoCardXORProtocol_rc.c function isZeroOne
+[isZeroOne.pointer_dereference.1] line 1093 dereference failure: pointer NULL in arr[(signed long int)0]: SUCCESS
+[isZeroOne.pointer_dereference.2] line 1093 dereference failure: pointer invalid in arr[(signed long int)0]: SUCCESS
+[isZeroOne.pointer_dereference.3] line 1093 dereference failure: deallocated dynamic object in arr[(signed long int)0]: SUCCESS
+[isZeroOne.pointer_dereference.4] line 1093 dereference failure: dead object in arr[(signed long int)0]: SUCCESS
+[isZeroOne.pointer_dereference.5] line 1093 dereference failure: pointer outside object bounds in arr[(signed long int)0]: SUCCESS
+[isZeroOne.pointer_dereference.6] line 1093 dereference failure: invalid integer address in arr[(signed long int)0]: SUCCESS
+[isZeroOne.pointer_dereference.7] line 1093 dereference failure: pointer NULL in arr[(signed long int)1]: SUCCESS
+[isZeroOne.pointer_dereference.8] line 1093 dereference failure: pointer invalid in arr[(signed long int)1]: SUCCESS
+[isZeroOne.pointer_dereference.9] line 1093 dereference failure: deallocated dynamic object in arr[(signed long int)1]: SUCCESS
+[isZeroOne.pointer_dereference.10] line 1093 dereference failure: dead object in arr[(signed long int)1]: SUCCESS
+[isZeroOne.pointer_dereference.11] line 1093 dereference failure: pointer outside object bounds in arr[(signed long int)1]: SUCCESS
+[isZeroOne.pointer_dereference.12] line 1093 dereference failure: invalid integer address in arr[(signed long int)1]: SUCCESS
+[isZeroOne.pointer_dereference.13] line 1093 dereference failure: pointer NULL in arr[(signed long int)2]: SUCCESS
+[isZeroOne.pointer_dereference.14] line 1093 dereference failure: pointer invalid in arr[(signed long int)2]: SUCCESS
+[isZeroOne.pointer_dereference.15] line 1093 dereference failure: deallocated dynamic object in arr[(signed long int)2]: SUCCESS
+[isZeroOne.pointer_dereference.16] line 1093 dereference failure: dead object in arr[(signed long int)2]: SUCCESS
+[isZeroOne.pointer_dereference.17] line 1093 dereference failure: pointer outside object bounds in arr[(signed long int)2]: SUCCESS
+[isZeroOne.pointer_dereference.18] line 1093 dereference failure: invalid integer address in arr[(signed long int)2]: SUCCESS
+[isZeroOne.pointer_dereference.19] line 1093 dereference failure: pointer NULL in arr[(signed long int)3]: SUCCESS
+[isZeroOne.pointer_dereference.20] line 1093 dereference failure: pointer invalid in arr[(signed long int)3]: SUCCESS
+[isZeroOne.pointer_dereference.21] line 1093 dereference failure: deallocated dynamic object in arr[(signed long int)3]: SUCCESS
+[isZeroOne.pointer_dereference.22] line 1093 dereference failure: dead object in arr[(signed long int)3]: SUCCESS
+[isZeroOne.pointer_dereference.23] line 1093 dereference failure: pointer outside object bounds in arr[(signed long int)3]: SUCCESS
+[isZeroOne.pointer_dereference.24] line 1093 dereference failure: invalid integer address in arr[(signed long int)3]: SUCCESS
+
+findTwoCardXORProtocol_rc.c function isZeroZero
+[isZeroZero.pointer_dereference.1] line 1086 dereference failure: pointer NULL in arr[(signed long int)0]: SUCCESS
+[isZeroZero.pointer_dereference.2] line 1086 dereference failure: pointer invalid in arr[(signed long int)0]: SUCCESS
+[isZeroZero.pointer_dereference.3] line 1086 dereference failure: deallocated dynamic object in arr[(signed long int)0]: SUCCESS
+[isZeroZero.pointer_dereference.4] line 1086 dereference failure: dead object in arr[(signed long int)0]: SUCCESS
+[isZeroZero.pointer_dereference.5] line 1086 dereference failure: pointer outside object bounds in arr[(signed long int)0]: SUCCESS
+[isZeroZero.pointer_dereference.6] line 1086 dereference failure: invalid integer address in arr[(signed long int)0]: SUCCESS
+[isZeroZero.pointer_dereference.7] line 1086 dereference failure: pointer NULL in arr[(signed long int)1]: SUCCESS
+[isZeroZero.pointer_dereference.8] line 1086 dereference failure: pointer invalid in arr[(signed long int)1]: SUCCESS
+[isZeroZero.pointer_dereference.9] line 1086 dereference failure: deallocated dynamic object in arr[(signed long int)1]: SUCCESS
+[isZeroZero.pointer_dereference.10] line 1086 dereference failure: dead object in arr[(signed long int)1]: SUCCESS
+[isZeroZero.pointer_dereference.11] line 1086 dereference failure: pointer outside object bounds in arr[(signed long int)1]: SUCCESS
+[isZeroZero.pointer_dereference.12] line 1086 dereference failure: invalid integer address in arr[(signed long int)1]: SUCCESS
+[isZeroZero.pointer_dereference.13] line 1086 dereference failure: pointer NULL in arr[(signed long int)2]: SUCCESS
+[isZeroZero.pointer_dereference.14] line 1086 dereference failure: pointer invalid in arr[(signed long int)2]: SUCCESS
+[isZeroZero.pointer_dereference.15] line 1086 dereference failure: deallocated dynamic object in arr[(signed long int)2]: SUCCESS
+[isZeroZero.pointer_dereference.16] line 1086 dereference failure: dead object in arr[(signed long int)2]: SUCCESS
+[isZeroZero.pointer_dereference.17] line 1086 dereference failure: pointer outside object bounds in arr[(signed long int)2]: SUCCESS
+[isZeroZero.pointer_dereference.18] line 1086 dereference failure: invalid integer address in arr[(signed long int)2]: SUCCESS
+[isZeroZero.pointer_dereference.19] line 1086 dereference failure: pointer NULL in arr[(signed long int)3]: SUCCESS
+[isZeroZero.pointer_dereference.20] line 1086 dereference failure: pointer invalid in arr[(signed long int)3]: SUCCESS
+[isZeroZero.pointer_dereference.21] line 1086 dereference failure: deallocated dynamic object in arr[(signed long int)3]: SUCCESS
+[isZeroZero.pointer_dereference.22] line 1086 dereference failure: dead object in arr[(signed long int)3]: SUCCESS
+[isZeroZero.pointer_dereference.23] line 1086 dereference failure: pointer outside object bounds in arr[(signed long int)3]: SUCCESS
+[isZeroZero.pointer_dereference.24] line 1086 dereference failure: invalid integer address in arr[(signed long int)3]: SUCCESS
+
+findTwoCardXORProtocol_rc.c function main
+[main.array_bounds.1] line 1137 array 'start' upper bound in start[(signed long int)i]: SUCCESS
+[main.array_bounds.2] line 1152 array 'start' upper bound in start[(signed long int)i]: SUCCESS
+[main.array_bounds.3] line 1152 array 'arrSeqIdx' upper bound in arrSeqIdx[(signed long int)i]: SUCCESS
+[main.array_bounds.4] line 1156 array 'arrSeqIdx' upper bound in arrSeqIdx[(signed long int)i]: SUCCESS
+[main.array_bounds.5] line 1170 array 'startState'.seq upper bound in startState.seq[(signed long int)idx]: SUCCESS
+[main.array_bounds.6] line 1170 array 'startState'.seq[].probs.frac upper bound in startState.seq[(signed long int)idx].probs.frac[(signed long int)pos]: SUCCESS
+[main.assertion.1] line 1183 assertion 0: SUCCESS
+
+findTwoCardXORProtocol_rc.c function performActions
+[performActions.array_bounds.1] line 1023 array 'reachableStates' upper bound in reachableStates[(signed long int)i]: SUCCESS
+[performActions.array_bounds.2] line 1040 array 'reachableStates' upper bound in reachableStates[(signed long int)i]: SUCCESS
+[performActions.array_bounds.3] line 1044 array 'possiblePostStates'.isUsed upper bound in possiblePostStates.isUsed[(signed long int)stateIdx]: SUCCESS
+[performActions.array_bounds.4] line 1045 array 'reachableStates' upper bound in reachableStates[(signed long int)next]: SUCCESS
+[performActions.array_bounds.5] line 1045 array 'possiblePostStates'.states upper bound in possiblePostStates.states[(signed long int)stateIdx]: SUCCESS
+[performActions.array_bounds.6] line 1054 array 'possiblePostStates'.isUsed upper bound in possiblePostStates.isUsed[(signed long int)j]: SUCCESS
+[performActions.array_bounds.7] line 1055 array 'possiblePostStates'.states upper bound in possiblePostStates.states[(signed long int)j]: SUCCESS
+[performActions.array_bounds.8] line 1069 array 'reachableStates' upper bound in reachableStates[(signed long int)i]: SUCCESS
+[performActions.array_bounds.9] line 1069 array 'reachableStates' upper bound in reachableStates[(signed long int)next]: SUCCESS
+
+findTwoCardXORProtocol_rc.c function recalculatePossibilities
+[recalculatePossibilities.array_bounds.1] line 766 array 'probs'.frac upper bound in probs.frac[(signed long int)k]: SUCCESS
+[recalculatePossibilities.array_bounds.2] line 769 array 'resProbs'.frac upper bound in resProbs.frac[(signed long int)k]: SUCCESS
+[recalculatePossibilities.array_bounds.3] line 781 array 'resProbs'.frac upper bound in resProbs.frac[(signed long int)k]: SUCCESS
+
+** 0 of 276 failed (1 iterations)
+VERIFICATION SUCCESSFUL
+
+############################################################
+# Final Time: 2024-11-29 13:33:44 JST
+# It took 1092 seconds.
+############################################################
